@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="author" content="Martim Teixeira" />
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'radyconsultingclub/images/Portugal.ico' %}" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Rady Consulting Club</title>
+      <link rel="stylesheet" href="{% static 'radyconsultingclub/css/styles.css' %}">
+      <script src="{% static 'radyconsultingclub/javascript/javascript.js' %}"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Racing+Sans+One&family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script>
+        window.onload = function() {
+          {% if messages %}
+            let messageText = "";
+            {% for message in messages %}
+              messageText += "{{ message }} ";
+            {% endfor %}
+      
+            // Trigger SweetAlert with the message
+            Swal.fire({
+              title: 'Message',
+              text: messageText,
+              icon: 'success',
+              confirmButtonText: 'Close'
+            });
+          {% endif %}
+        }
+      </script>
+    </head>
+    <body>
+        <header>
+            <a href="{% url 'radyconsultingclub:home_page_view' %}" class="logolayout"
+              ><img src="{% static 'radyconsultingclub/images/Logo.png' %}"
+              /></a>
+            <div class="topnav" id="myTopnav">
+              <a href="#about">Home</a>
+              <a href="#lifePath">Team</a>
+              <a href="#projects">Case Studies</a>
+              <a href="#contact">Contact</a>
+              <a
+                href="javascript:void(0);"
+                style="font-size: 15px; position: fixed; top: 0; right: 0"
+                class="icon"
+                onclick="myFunction()"
+                >&#9776;</a
+              >
+            </div>
+          </header>
+        <main>{% block main %} {% endblock main %}</main>
+        <footer>
+          <div class="footer-content">
+            <p>Rady Consulting Club</p>
+            <p>&copy; 2024 Martim Teixeira</p>
+          </div>
+      </footer>
+    </body>
+</html>

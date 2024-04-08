@@ -1,0 +1,16 @@
+{% extends 'radyconsultingclub/layout.html' %} {% block main %}
+{% load static %}
+<div class="hero-container">
+    <div class="hero-image" id="heroImage">
+        <img src="{% static 'radyconsultingclub/images/Rady.jpg' %}" alt="Image 1" class="slide">
+    </div>
+
+    <div class="hero-titles">
+        <h2 class="centered-title">Rady Consulting Club</h2>
+        <h3 class="centered-subtitle">UC San Diego</h3>
+    </div>
+
+    <button id="prevBtn" class="nav-btn">❮</button>
+    <button id="nextBtn" class="nav-btn">❯</button>
+</div>
+{% endblock %}
