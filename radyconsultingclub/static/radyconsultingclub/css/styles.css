@@ -117,8 +117,8 @@ main {
 
 .hero-titles {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 52%;
+    left: 22%;
     transform: translate(-50%, -50%);
     color: white; /* or any color that suits your design */
 }
@@ -143,6 +143,15 @@ main {
     color: white;
 }
 
+/* After hero image */
+
+.centered-title-second {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    padding: 10px;
+}
 
 /* Footer */
 
