@@ -153,6 +153,49 @@ main {
     padding: 10px;
 }
 
+/* Team */
+
+.team-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.team-member {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    width: 70%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.name {
+    margin: 10px 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.position {
+    margin: 10px 0;
+    color: #333;
+    font-size: 20px;
+}
+
 /* Footer */
 
 footer {
@@ -166,4 +209,52 @@ footer {
 
 .footer-content p {
     margin: 5px 0;
+}
+
+/* Contact */
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    padding: 20px;
+
+}
+
+.contact-text {
+    flex-basis: 40%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-form-container {
+    flex-basis: 50%;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+}
+
+.contact-form textarea {
+    resize: none; /* Disable resizing */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }

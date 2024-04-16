@@ -17,16 +17,76 @@
     <p>We are a group of students who wants to provide the opportunity to other students o having a first contact with the world of consulting.</p>
     <p>The purpose of this club is to give to the students a first contact with the real world of consulting. We want to bring some cases and work with companies with small projects, and also participate in competitions related to consulting, being one of them this fall.</p>
 </div>
-<h1 class="centered-title-second">Team</h1>
+<h1 class="centered-title-second">Our Mission</h1>
 <div>
-    <p>Test</p>
+    <p>We are a group of students who wants to provide the opportunity to other students o having a first contact with the world of consulting.</p>
+    <p>The purpose of this club is to give to the students a first contact with the real world of consulting. We want to bring some cases and work with companies with small projects, and also participate in competitions related to consulting, being one of them this fall.</p>
+</div>
+<div class="team-container">
+    <h1 class="centered-title-second">Team</h1>
+    <div class="team-grid">
+        <!-- Sample team member -->
+        <div class="team-member">
+            <img src="{% static 'radyconsultingclub/images/website president.jpg' %}" alt="Member Name">
+            <p class="name">Martim Teixeira</p>
+            <p class="position">President</p>
+        </div>
+        <!-- Repeat for each team member -->
+        <div class="team-member">
+            <img src="path_to_photo2.jpg" alt="Member Name">
+            <p class="name">Name 2</p>
+            <p class="position">Position 2</p>
+        </div>
+        <div class="team-member">
+            <img src="path_to_photo3.jpg" alt="Member Name">
+            <p class="name">Name 3</p>
+            <p class="position">Position 3</p>
+        </div>
+        <div class="team-member">
+            <img src="path_to_photo4.jpg" alt="Member Name">
+            <p class="name">Name 4</p>
+            <p class="position">Position 4</p>
+        </div>
+        <div class="team-member">
+            <img src="path_to_photo5.jpg" alt="Member Name">
+            <p class="name">Name 5</p>
+            <p class="position">Position 5</p>
+        </div>
+        <div class="team-member">
+            <img src="path_to_photo6.jpg" alt="Member Name">
+            <p class="name">Name 6</p>
+            <p class="position">Position 6</p>
+        </div>
+        <div class="team-member">
+            <img src="path_to_photo7.jpg" alt="Member Name">
+            <p class="name">Name 7</p>
+            <p class="position">Position 7</p>
+        </div>
+        <div class="team-member">
+            <img src="path_to_photo8.jpg" alt="Member Name">
+            <p class="name">Name 8</p>
+            <p class="position">Position 8</p>
+        </div>
+    </div>
 </div>
 <h1 class="centered-title-second">Case Studies</h1>
 <div>
     <p>Test</p>
 </div>
-<h1 class="centered-title-second">Contact</h1>
-<div>
-    <p>Test</p>
+<div class="container">
+    <div class="contact-text">
+        <h1 style="font-size: 40px; padding-top: 90px;">Contact</h1>
+        <p style="font-size: 24px;">If you have any questions, please reach out!</p>
+    </div>
+    <div class="contact-form-container">
+        <form method="post" class="contact-form">
+            <!-- Assume CSRF token and form are properly handled server-side -->
+            <p><input type="text" name="name" placeholder="Name" required></p>
+            <p><input type="email" name="email" placeholder="Email" required></p>
+            <p><input type="text" name="subject" placeholder="Subject" required></p>
+            <p><textarea name="message" placeholder="Message" required rows="10" cols="40"></textarea></p>
+            <p style="align-items: center; text-align: center;"><button type="submit" class="btn">Send</button></p>
+        </form>
+    </div>
 </div>
 {% endblock %}
